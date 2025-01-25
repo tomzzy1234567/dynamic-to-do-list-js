@@ -1,3 +1,4 @@
+// Wait for the DOM to fully load before running the JavaScript code
 document.addEventListener('DOMContentLoaded', function () {
   // Select the "Add Task" button, task input field, and task list
   const addButton = document.getElementById('add-task-btn');
@@ -19,6 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const removeButton = document.createElement('button');
       removeButton.textContent = 'Remove';
       removeButton.className = 'remove-btn';
+      removeButton.classList.add('remove-btn-style'); // Add classList.add
 
       // Assign an onclick event to the remove button
       removeButton.onclick = function () {
